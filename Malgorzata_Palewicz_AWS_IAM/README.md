@@ -18,7 +18,7 @@ When running the application, you may encounter an error message:
 1. Navigate to the project directory:
 
 ```bash
-cd "path"
+cd "path/Malgorzata_Palewicz_AWS_IAM/target"
 ```
 
 2. Run the project:
