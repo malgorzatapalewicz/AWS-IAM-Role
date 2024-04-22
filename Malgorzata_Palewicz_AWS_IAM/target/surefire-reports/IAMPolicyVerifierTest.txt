@@ -1,0 +1,62 @@
+-------------------------------------------------------------------------------
+Test set: IAMPolicyVerifierTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.035 s <<< FAILURE! -- in IAMPolicyVerifierTest
+IAMPolicyVerifierTest.invalidResource -- Time elapsed: 0.005 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalStateException> but was: <java.lang.RuntimeException>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+	at IAMPolicyVerifierTest.invalidResource(IAMPolicyVerifierTest.java:25)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: java.lang.RuntimeException: java.io.FileNotFoundException: File 'src/main/resources/invalidTest.json' not found
+	at org.sabre.IAMPolicyVerifier.verifyPolicy(IAMPolicyVerifier.java:40)
+	at IAMPolicyVerifierTest.lambda$invalidResource$1(IAMPolicyVerifierTest.java:25)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
+	... 6 more
+Caused by: java.io.FileNotFoundException: File 'src/main/resources/invalidTest.json' not found
+	at org.sabre.IAMPolicyVerifier.verifyPolicy(IAMPolicyVerifier.java:18)
+	... 8 more
+
+IAMPolicyVerifierTest.isValidStatementInvalid -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalStateException> but was: <java.lang.RuntimeException>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+	at IAMPolicyVerifierTest.isValidStatementInvalid(IAMPolicyVerifierTest.java:31)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: java.lang.RuntimeException: java.io.FileNotFoundException: File 'src/main/resources/invalidStatement.json' not found
+	at org.sabre.IAMPolicyVerifier.verifyPolicy(IAMPolicyVerifier.java:40)
+	at IAMPolicyVerifierTest.lambda$isValidStatementInvalid$2(IAMPolicyVerifierTest.java:31)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
+	... 6 more
+Caused by: java.io.FileNotFoundException: File 'src/main/resources/invalidStatement.json' not found
+	at org.sabre.IAMPolicyVerifier.verifyPolicy(IAMPolicyVerifier.java:18)
+	... 8 more
+
+IAMPolicyVerifierTest.multipleStatements -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.RuntimeException: java.io.FileNotFoundException: File 'src/main/resources/validTest.json' not found
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:53)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3168)
+	at IAMPolicyVerifierTest.multipleStatements(IAMPolicyVerifierTest.java:19)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: java.lang.RuntimeException: java.io.FileNotFoundException: File 'src/main/resources/validTest.json' not found
+	at org.sabre.IAMPolicyVerifier.verifyPolicy(IAMPolicyVerifier.java:40)
+	at IAMPolicyVerifierTest.lambda$multipleStatements$0(IAMPolicyVerifierTest.java:19)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
+	... 6 more
+Caused by: java.io.FileNotFoundException: File 'src/main/resources/validTest.json' not found
+	at org.sabre.IAMPolicyVerifier.verifyPolicy(IAMPolicyVerifier.java:18)
+	... 8 more
+
