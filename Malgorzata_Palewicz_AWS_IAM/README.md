@@ -10,9 +10,7 @@ This Java application verifies the correctness of IAM (Identity and Access Manag
 - Includes unit tests to cover various scenarios and edge cases.
 
 ### Additional Notes
-When running the application, you may encounter an error message:
-"One or more resources in the policy contain a single *." because 'Resource' field contains a single asterisk
-
+The program should throw an error message: "One or more resources in the policy contain a single *." because the 'Resource' field contains a single asterisk.
 ### Usage
 
 1. Navigate to the project directory:
