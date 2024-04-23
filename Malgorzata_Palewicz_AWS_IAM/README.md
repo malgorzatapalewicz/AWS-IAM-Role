@@ -33,4 +33,5 @@ java -jar Malgorzata_Palewicz_AWS_IAM-1.0-SNAPSHOT-jar-with-dependencies.jar cla
 
 ### Contact
 
-For any inquiries or issues, please contact [malgorzata.maria.palewicz@gmail.com](malgorzata.maria.palewicz@gmail.com).
+For any inquiries or issues, please contact
+[Email: malgorzata.maria.palewicz@gmail.com](mailto:malgorzata.maria.palewicz@gmail.com).
